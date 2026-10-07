@@ -1,2 +1,3 @@
-# vidgrabx-website
-Official website for VidGrabX video downloader app
+# VidGrabX Website
+
+Official static website for VidGrabX.
