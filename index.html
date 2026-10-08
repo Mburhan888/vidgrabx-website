@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,56 +9,408 @@
 <meta name="description" content="Download supported public videos you are authorized to save with VidGrabX online or on Android.">
 <link rel="stylesheet" href="styles.css">
 <style>
-:root{color-scheme:dark} .web-tool{max-width:800px;margin:28px auto 0;padding:28px;border:1px solid #62328d;border-radius:24px;background:linear-gradient(145deg,#1e0d33,#100a1c 65%,#09070e);box-shadow:0 14px 45px #5e1aa12e;text-align:left}.web-tool h2{margin:0 0 8px;color:#f4e9ff}.web-tool p{color:#c8b7d9}.tool-row{display:flex;gap:12px;margin-top:20px}.tool-row input{flex:1;min-width:0;padding:17px 16px;border-radius:14px;border:1px solid #8340bc;background:#090713;color:#fff;font:inherit;outline:none}.tool-row input:focus{border-color:#d6a6ff;box-shadow:0 0 0 3px #9a4dff35}.tool-row button{border:0;border-radius:14px;padding:15px 23px;background:linear-gradient(120deg,#b34cff,#751ad7);color:#fff;font:inherit;font-weight:750;cursor:pointer}.tool-row button:disabled{opacity:.65;cursor:wait}.tool-row button:hover:not(:disabled){filter:brightness(1.14)}.tool-status{min-height:24px;margin-top:14px;color:#d7b3ff;font-size:14px;overflow-wrap:anywhere}.tool-progress{width:100%;height:9px;accent-color:#a44cff;margin-top:12px}.tool-note{font-size:12px;line-height:1.5}.tool-link{color:#dfb8ff;text-decoration:underline}.tool-result{display:none;margin-top:14px}.tool-result a{display:inline-block;padding:12px 18px;border-radius:12px;background:#7230c0;color:white;text-decoration:none;font-weight:700}@media(max-width:650px){.web-tool{padding:20px}.tool-row{flex-direction:column}.tool-row button{width:100%}}
+:root{color-scheme:dark}
+.web-tool{max-width:800px;margin:28px auto 0;padding:28px;border:1px solid #62328d;border-radius:24px;background:linear-gradient(145deg,#1e0d33,#100a1c 65%,#09070e);box-shadow:0 14px 45px #5e1aa12e;text-align:left}
+.web-tool h2{margin:0 0 8px;color:#f4e9ff}
+.web-tool p{color:#c8b7d9}
+.tool-row{display:flex;gap:12px;margin-top:20px}
+.tool-row input{flex:1;min-width:0;padding:17px 16px;border-radius:14px;border:1px solid #8340bc;background:#090713;color:#fff;font:inherit;outline:none}
+.tool-row input:focus{border-color:#d6a6ff;box-shadow:0 0 0 3px #9a4dff35}
+.tool-row button{border:0;border-radius:14px;padding:15px 23px;background:linear-gradient(120deg,#b34cff,#751ad7);color:#fff;font:inherit;font-weight:750;cursor:pointer}
+.tool-row button:disabled{opacity:.65;cursor:wait}
+.tool-row button:hover:not(:disabled){filter:brightness(1.14)}
+.tool-status{min-height:24px;margin-top:14px;color:#d7b3ff;font-size:14px;overflow-wrap:anywhere}
+.tool-progress{width:100%;height:9px;accent-color:#a44cff;margin-top:12px}
+.tool-note{font-size:12px;line-height:1.5}
+.tool-link{color:#dfb8ff;text-decoration:underline}
+@media(max-width:650px){
+.web-tool{padding:20px}
+.tool-row{flex-direction:column}
+.tool-row button{width:100%}
+}
 </style>
 </head>
 <body>
-<header><div class="wrap"><nav><a class="brand" href="index.html">Vid<span>GrabX</span></a><div class="links"><a href="index.html">Home</a><a href="#online-downloader">Online Downloader</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a class="btn" href="support.html">Support</a></div></nav></div></header>
+
+<header>
+<div class="wrap">
+<nav>
+<a class="brand" href="index.html">Vid<span>GrabX</span></a>
+<div class="links">
+<a href="index.html">Home</a>
+<a href="#online-downloader">Online Downloader</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a class="btn" href="support.html">Support</a>
+</div>
+</nav>
+</div>
+</header>
+
 <main>
-<section class="hero"><div class="wrap"><div class="muted">FAST • SIMPLE • CLEAN</div><h1>Save videos with <span style="color:#a44cff">VidGrabX</span></h1><p>Paste a supported public video link and download content you have permission to save — directly from your browser or using the Android app.</p><div class="actions"><a class="btn" href="#online-downloader">Download Video Online</a><a class="btn alt" href="#download">Get Android App</a></div>
-<div id="online-downloader" class="web-tool"><h2>Online Video Downloader</h2><p>Paste a supported public TikTok, Instagram or Facebook video URL.</p><form id="video-form"><label for="video-url" style="color:#e5d3f4;font-weight:650">Video URL</label><div class="tool-row"><input id="video-url" type="url" placeholder="https://..." autocomplete="url" inputmode="url" required aria-describedby="download-status"><button id="download-button" type="submit">Download Video</button></div></form><progress id="download-progress" class="tool-progress" max="100" value="0" hidden></progress><div id="download-status" class="tool-status" role="status" aria-live="polite">Ready to download.</div><div class="tool-result" id="tool-result"><a id="save-video" href="#" download="vidgrabx-video.mp4">Save Video</a></div><p class="tool-note">Only download content you own or are authorized to save. Private, restricted, or unsupported videos may not work. Large downloads may take time and use device storage.</p></div>
-<p style="font-size:13px">VidGrabX is independent and is not affiliated with social media platforms.</p></div></section>
-<section id="features"><div class="wrap"><h2>Everything in one place</h2><div class="grid"><div class="card"><h3>⚡ Simple Downloads</h3><p>Paste a supported public video link and save content you are authorized to download.</p></div><div class="card"><h3>▣ Organized Library</h3><p>Keep downloaded videos accessible from the Android app and your device gallery where supported.</p></div><div class="card"><h3>▶ Built-in Player</h3><p>Play videos saved in the Android app with convenient playback controls.</p></div></div></div></section>
-<section><div class="wrap"><h2>Supported experience</h2><p class="muted">Designed for supported public links. Platform availability can change.</p><span class="pill">TikTok</span><span class="pill">Instagram</span><span class="pill">Facebook</span></div></section>
-<section id="download"><div class="wrap card" style="text-align:center"><h2>VidGrabX for Android</h2><p>Get the Android app to organize your downloads and play saved videos.</p><a class="btn" href="https://github.com/Mburhan888/vidgrabx-website/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer">View Android Release</a><p style="font-size:12px">Install only a tested release. Availability may change.</p></div></section>
+<section class="hero">
+<div class="wrap">
+
+<div class="muted">FAST • SIMPLE • CLEAN</div>
+
+<h1>Save videos with <span style="color:#a44cff">VidGrabX</span></h1>
+
+<p>Paste a supported public video link and download content you have permission to save — directly from your browser or using the Android app.</p>
+
+<div class="actions">
+<a class="btn" href="#online-downloader">Download Video Online</a>
+<a class="btn alt" href="#download">Get Android App</a>
+</div>
+
+<div id="online-downloader" class="web-tool">
+
+<h2>Online Video Downloader</h2>
+
+<p>Paste a supported public TikTok, Instagram or Facebook video URL.</p>
+
+<form id="video-form">
+
+<label for="video-url" style="color:#e5d3f4;font-weight:650">
+Video URL
+</label>
+
+<div class="tool-row">
+<input
+id="video-url"
+type="url"
+placeholder="https://..."
+autocomplete="url"
+inputmode="url"
+required
+aria-describedby="download-status"
+>
+
+<button id="download-button" type="submit">
+Download Video
+</button>
+</div>
+
+</form>
+
+<progress
+id="download-progress"
+class="tool-progress"
+max="100"
+value="0"
+hidden>
+</progress>
+
+<div
+id="download-status"
+class="tool-status"
+role="status"
+aria-live="polite">
+Ready to download.
+</div>
+
+<p class="tool-note">
+Only download content you own or are authorized to save.
+Private, restricted, or unsupported videos may not work.
+Large downloads may take time and use device storage.
+</p>
+
+</div>
+
+<p style="font-size:13px">
+VidGrabX is independent and is not affiliated with social media platforms.
+</p>
+
+</div>
+</section>
+
+<section id="features">
+<div class="wrap">
+<h2>Everything in one place</h2>
+<div class="grid">
+
+<div class="card">
+<h3>⚡ Simple Downloads</h3>
+<p>Paste a supported public video link and save content you are authorized to download.</p>
+</div>
+
+<div class="card">
+<h3>▣ Organized Library</h3>
+<p>Keep downloaded videos accessible from the Android app and your device gallery where supported.</p>
+</div>
+
+<div class="card">
+<h3>▶ Built-in Player</h3>
+<p>Play videos saved in the Android app with convenient playback controls.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Supported experience</h2>
+<p class="muted">Designed for supported public links. Platform availability can change.</p>
+<span class="pill">TikTok</span>
+<span class="pill">Instagram</span>
+<span class="pill">Facebook</span>
+</div>
+</section>
+
+<section id="download">
+<div class="wrap card" style="text-align:center">
+<h2>VidGrabX for Android</h2>
+<p>Get the Android app to organize your downloads and play saved videos.</p>
+<a
+class="btn"
+href="https://github.com/Mburhan888/vidgrabx-website/releases/tag/v1.0.0"
+target="_blank"
+rel="noopener noreferrer">
+View Android Release
+</a>
+<p style="font-size:12px">
+Install only a tested release. Availability may change.
+</p>
+</div>
+</section>
+
 </main>
-<footer><div class="wrap foot"><span>© 2026 VidGrabX</span><span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="support.html">Support</a></span></div></footer>
+
+<footer>
+<div class="wrap foot">
+<span>© 2026 VidGrabX</span>
+<span>
+<a href="privacy.html">Privacy</a> ·
+<a href="terms.html">Terms</a> ·
+<a href="support.html">Support</a>
+</span>
+</div>
+</footer>
+
 <script>
-(()=>{'use strict';
-const endpoint='https://eager-cedar-4884.de.deplexo.com/download';
-const form=document.getElementById('video-form');
-const input=document.getElementById('video-url');
-const button=document.getElementById('download-button');
-const status=document.getElementById('download-status');
-const progress=document.getElementById('download-progress');
-const result=document.getElementById('tool-result');
-const save=document.getElementById('save-video');
-let objectUrl=null;
-function message(text){status.textContent=text;}
-function cleanup(){if(objectUrl){URL.revokeObjectURL(objectUrl);objectUrl=null;}}
-window.addEventListener('pagehide',cleanup);
-form.addEventListener('submit',async(event)=>{
-event.preventDefault();
-let parsed;
-try{parsed=new URL(input.value.trim());if(!['http:','https:'].includes(parsed.protocol))throw Error();}catch{message('Please enter a valid http or https video URL.');return;}
-cleanup();result.style.display='none';button.disabled=true;button.textContent='Downloading...';progress.hidden=false;progress.removeAttribute('value');message('Connecting to download server...');
-try{
-const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({url:parsed.href})});
-if(!response.ok){let err='Server error ('+response.status+').';try{const data=await response.json();if(data.error)err=String(data.error);}catch{}throw new Error(err);}
-const type=(response.headers.get('content-type')||'').toLowerCase();
-if(!type.includes('video')&&!type.includes('octet-stream'))throw new Error('Server did not return a video.');
-const total=Number(response.headers.get('content-length'))||0;
-let blob;
-if(response.body&&typeof response.body.getReader==='function'){
-const reader=response.body.getReader();const chunks=[];let received=0;
-while(true){const {done,value}=await reader.read();if(done)break;chunks.push(value);received+=value.length;if(total){progress.value=Math.min(100,Math.round(received/total*100));message('Downloading video... '+progress.value+'%');}else{message('Downloading video... '+(received/1048576).toFixed(1)+' MB received');}}
-blob=new Blob(chunks,{type:'video/mp4'});
-}else{message('Downloading video...');blob=await response.blob();}
-if(blob.size===0)throw new Error('The server returned an empty video.');
-objectUrl=URL.createObjectURL(blob);save.href=objectUrl;save.download='vidgrabx-video-'+Date.now()+'.mp4';result.style.display='block';progress.value=100;message('Download ready! Tap “Save Video” to save it to your device.');
-}catch(error){progress.hidden=true;const corsHint='If the server works in the app but not here, the backend must allow cross-origin browser requests (CORS) from this website.';message(error instanceof TypeError?'Browser could not reach the server. '+corsHint:'Download failed: '+error.message);}
-finally{button.disabled=false;button.textContent='Download Video';}
+(() => {
+'use strict';
+
+const endpoint = 'https://eager-cedar-4884.de.deplexo.com/download';
+
+const form = document.getElementById('video-form');
+const input = document.getElementById('video-url');
+const button = document.getElementById('download-button');
+const status = document.getElementById('download-status');
+const progress = document.getElementById('download-progress');
+
+let objectUrl = null;
+let revokeTimer = null;
+
+function message(text) {
+    status.textContent = text;
+}
+
+function cleanup() {
+    if (revokeTimer !== null) {
+        clearTimeout(revokeTimer);
+        revokeTimer = null;
+    }
+
+    if (objectUrl) {
+        URL.revokeObjectURL(objectUrl);
+        objectUrl = null;
+    }
+}
+
+window.addEventListener('pagehide', cleanup);
+
+form.addEventListener('submit', async (event) => {
+
+    event.preventDefault();
+
+    let parsed;
+
+    try {
+        parsed = new URL(input.value.trim());
+
+        if (!['http:', 'https:'].includes(parsed.protocol)) {
+            throw new Error('Invalid URL');
+        }
+
+    } catch {
+        message('Please enter a valid http or https video URL.');
+        return;
+    }
+
+    cleanup();
+
+    button.disabled = true;
+    button.textContent = 'Downloading...';
+
+    progress.hidden = false;
+    progress.removeAttribute('value');
+
+    message('Connecting to download server...');
+
+    try {
+
+        const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                url: parsed.href
+            })
+        });
+
+        if (!response.ok) {
+
+            let err = 'Server error (' + response.status + ').';
+
+            try {
+                const data = await response.json();
+
+                if (data.error) {
+                    err = String(data.error);
+                }
+
+            } catch {}
+
+            throw new Error(err);
+        }
+
+        const type = (
+            response.headers.get('content-type') || ''
+        ).toLowerCase();
+
+        if (
+            !type.includes('video') &&
+            !type.includes('octet-stream')
+        ) {
+            throw new Error('Server did not return a video.');
+        }
+
+        const total = Number(
+            response.headers.get('content-length')
+        ) || 0;
+
+        let blob;
+
+        if (
+            response.body &&
+            typeof response.body.getReader === 'function'
+        ) {
+
+            const reader = response.body.getReader();
+            const chunks = [];
+
+            let received = 0;
+
+            while (true) {
+
+                const { done, value } = await reader.read();
+
+                if (done) {
+                    break;
+                }
+
+                chunks.push(value);
+                received += value.length;
+
+                if (total) {
+
+                    progress.value = Math.min(
+                        100,
+                        Math.round(received / total * 100)
+                    );
+
+                    message(
+                        'Downloading video... ' +
+                        progress.value +
+                        '%'
+                    );
+
+                } else {
+
+                    message(
+                        'Downloading video... ' +
+                        (received / 1048576).toFixed(1) +
+                        ' MB received'
+                    );
+                }
+            }
+
+            blob = new Blob(chunks, {
+                type: 'video/mp4'
+            });
+
+        } else {
+
+            message('Downloading video...');
+
+            blob = await response.blob();
+        }
+
+        if (blob.size === 0) {
+            throw new Error('The server returned an empty video.');
+        }
+
+        // ============================================
+        // AUTOMATIC VIDEO DOWNLOAD
+        // ============================================
+        // No second Save Video button is needed.
+
+        objectUrl = URL.createObjectURL(blob);
+
+        const downloadLink = document.createElement('a');
+
+        downloadLink.href = objectUrl;
+
+        downloadLink.download =
+            'vidgrabx-video-' + Date.now() + '.mp4';
+
+        downloadLink.style.display = 'none';
+
+        document.body.appendChild(downloadLink);
+
+        downloadLink.click();
+
+        downloadLink.remove();
+
+        progress.value = 100;
+
+        message(
+            'Download started! Check your phone Downloads folder or Gallery.'
+        );
+
+        // Give Chrome time to start saving the Blob.
+        // The browser controls the final download location.
+        revokeTimer = setTimeout(() => {
+            cleanup();
+        }, 120000);
+
+    } catch (error) {
+
+        progress.hidden = true;
+
+        const corsHint =
+            'If the server works in the app but not here, ' +
+            'the backend must allow cross-origin browser requests (CORS) ' +
+            'from this website.';
+
+        message(
+            error instanceof TypeError
+                ? 'Browser could not reach the server. ' + corsHint
+                : 'Download failed: ' + error.message
+        );
+
+    } finally {
+
+        button.disabled = false;
+        button.textContent = 'Download Video';
+    }
+
 });
+
 })();
 </script>
-</body></html>
+
+</body>
+</html>
